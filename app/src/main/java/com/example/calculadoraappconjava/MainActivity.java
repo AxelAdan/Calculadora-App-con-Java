@@ -8,6 +8,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     public TextView textView;
@@ -39,7 +42,9 @@ public class MainActivity extends AppCompatActivity {
     }
     public void punto(View view){
         String btn = textView.getText().toString();
-        btn = btn+".";
+        if(!btn.contains(".")) {
+            btn = btn+".";
+        }
         textView.setText(btn);
     }
 
@@ -62,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
     public void cuatro(View view) {
         String btn = textView.getText().toString();
         btn = btn+"4";
+
         textView.setText(btn);
     }
     public void cinco(View view) {
@@ -101,40 +107,51 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sumar(View view) {
-        num1 = Double.parseDouble(textView.getText().toString());
-        operador = '+';
-        textView.setText("");
+        if(textView.getText().toString() != "") {
+            num1 = Double.parseDouble(textView.getText().toString());
+            operador = '+';
+            textView.setText("");
+        }
     }
 
     public void restar(View view) {
-        num1 = Double.parseDouble(textView.getText().toString());
-        operador = '-';
-        textView.setText("");
+        if(textView.getText().toString() != "") {
+            num1 = Double.parseDouble(textView.getText().toString());
+            operador = '-';
+            textView.setText("");
+        }
     }
     public void multiplicar(View view) {
-        num1 = Double.parseDouble(textView.getText().toString());
-        operador = 'x';
-        textView.setText("");
+        if(textView.getText().toString() != "") {
+            num1 = Double.parseDouble(textView.getText().toString());
+            operador = 'x';
+            textView.setText("");
+        }
     }
     public void dividir(View view) {
-        num1 = Double.parseDouble(textView.getText().toString());
-        operador = '/';
-        textView.setText("");
+        if(textView.getText().toString() != "") {
+            num1 = Double.parseDouble(textView.getText().toString());
+            operador = '/';
+            textView.setText("");
+        }
     }
 
     public void resultado(View view) {
-        num2 = Double.parseDouble(textView.getText().toString());
-        if(operador== '+'){
-            total = num1 + num2;
-        } else if(operador == '-') {
-            total = num1 - num2;
-        } else if (operador == 'x') {
-            total = num1 * num2;
-        } else {
-            total = num1/num2;
+        if(textView.getText().toString() != "" ) {
+            num2 = Double.parseDouble(textView.getText().toString());
+            if(operador== '+'){
+                total = num1 + num2;
+            } else if(operador == '-') {
+                total = num1 - num2;
+            } else if (operador == 'x') {
+                total = num1 * num2;
+            } else {
+                total = num1/num2;
+            }
+            textView.setText(Double.toString(total));
+            num1 = 0.0;
+            num2= 0.0;
         }
-        textView.setText(Double.toString(total));
-        num1 = 0.0;
-        num2= 0.0;
+
     }
 }
