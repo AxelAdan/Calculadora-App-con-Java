@@ -13,7 +13,7 @@
         android:layout_marginStart="120dp"
         android:layout_marginBottom="28dp"
         android:text="DEL"
-        android:onClick="limpiarDatos"
+        android:onClick="limpiar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button0" />
 
@@ -23,7 +23,7 @@
         android:layout_height="75dp"
         android:layout_marginStart="20dp"
         android:layout_marginBottom="28dp"
-        android:onClick="escribirPunto"
+        android:onClick="punto"
         android:text="."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button0" />
@@ -34,7 +34,7 @@
         android:layout_height="75dp"
         android:layout_marginStart="24dp"
         android:layout_marginBottom="28dp"
-        android:onClick="escribirCero"
+        android:onClick="cero"
         android:text="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -45,7 +45,7 @@
         android:layout_height="75dp"
         android:layout_marginStart="24dp"
         android:layout_marginBottom="124dp"
-        android:onClick="escribirUno"
+        android:onClick="uno"
         android:text="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -56,7 +56,7 @@
         android:layout_height="75dp"
         android:layout_marginStart="120dp"
         android:layout_marginBottom="124dp"
-        android:onClick="escribirDos"
+        android:onClick="dos"
         android:text="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -67,7 +67,7 @@
         android:layout_height="75dp"
         android:layout_marginStart="220dp"
         android:layout_marginBottom="124dp"
-        android:onClick="escribirTres"
+        android:onClick="tres"
         android:text="3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -78,7 +78,7 @@
         android:layout_height="75dp"
         android:layout_marginStart="220dp"
         android:layout_marginBottom="212dp"
-        android:onClick="escribirSeis"
+        android:onClick="seis"
         android:text="6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -89,7 +89,7 @@
         android:layout_height="75dp"
         android:layout_marginStart="212dp"
         android:layout_marginBottom="300dp"
-        android:onClick="escribirNueve"
+        android:onClick="nueve"
         android:text="9"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -101,7 +101,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginBottom="212dp"
         android:text="4"
-        android:onClick="escribirCuatro"
+        android:onClick="cuatro"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -111,7 +111,7 @@
         android:layout_height="75dp"
         android:layout_marginStart="120dp"
         android:layout_marginBottom="212dp"
-        android:onClick="escribirCinco"
+        android:onClick="cinco"
         android:text="5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -122,7 +122,7 @@
         android:layout_height="75dp"
         android:layout_marginStart="24dp"
         android:layout_marginBottom="300dp"
-        android:onClick="escribirSiete"
+        android:onClick="siete"
         android:text="7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -133,7 +133,7 @@
         android:layout_height="75dp"
         android:layout_marginStart="120dp"
         android:layout_marginBottom="300dp"
-        android:onClick="escribirOcho"
+        android:onClick="ocho"
         android:text="8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -144,7 +144,7 @@
         android:layout_height="75dp"
         android:layout_marginStart="220dp"
         android:layout_marginBottom="28dp"
-        android:onClick="operacionResultado"
+        android:onClick="resultado"
         android:text="="
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button0" />
@@ -156,7 +156,7 @@
         android:layout_marginStart="220dp"
         android:layout_marginBottom="124dp"
         android:text="+"
-        android:onClick="sumarDatos"
+        android:onClick="sumar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button0" />
 
@@ -166,7 +166,7 @@
         android:layout_height="75dp"
         android:layout_marginStart="220dp"
         android:layout_marginBottom="212dp"
-        android:onClick="restarDatos"
+        android:onClick="restar"
         android:text="-"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button0" />
@@ -177,7 +177,7 @@
         android:layout_height="75dp"
         android:layout_marginStart="220dp"
         android:layout_marginBottom="300dp"
-        android:onClick="multiplicarDatos"
+        android:onClick="multiplicar"
         android:text="x"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button0" />
@@ -188,7 +188,7 @@
         android:layout_height="68dp"
         android:layout_marginStart="220dp"
         android:layout_marginBottom="388dp"
-        android:onClick="dividirrDatos"
+        android:onClick="dividir"
         android:text="/"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button0" />

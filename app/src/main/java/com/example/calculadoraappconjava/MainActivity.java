@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     double num1;
     double num2;
     double total = 0;
-    public Button button1,button2, button3, button4, button5, button6, button7, button8, button9, button0, buttonSuma, buttonResta, buttonDivicion, buttonMultiplicacion, buttonIgual;
+    public Button button1,button2, button3, button4, button5, button6, button7, button8, button9, button0;
 
     char operador;
 
@@ -36,119 +36,105 @@ public class MainActivity extends AppCompatActivity {
         button9 = findViewById(R.id.button9);
         button0 = findViewById(R.id.button0);
 
-
-        buttonSuma = findViewById(R.id.buttonSuma);
-        buttonResta = findViewById(R.id.buttonResta);
-        buttonMultiplicacion = findViewById(R.id.buttonMultiplicacion);
-        buttonDivicion = findViewById(R.id.buttonDivicion);
-        buttonIgual = findViewById(R.id.buttonIgual);
     }
-    public void escribirPunto(View view){
-        String cap = textView.getText().toString();
-        cap = cap+".";
-        textView.setText(cap);
+    public void punto(View view){
+        String btn = textView.getText().toString();
+        btn = btn+".";
+        textView.setText(btn);
     }
 
-    public void escribirUno(View view){
-        String cap = textView.getText().toString();
-        cap = cap+"1";
-        textView.setText(cap);
+    public void uno(View view){
+        String btn = textView.getText().toString();
+        btn = btn+"1";
+        textView.setText(btn);
     }
 
-    public void escribirDos(View view) {
-        String cap = textView.getText().toString();
-        cap = cap+"2";
-        textView.setText(cap);
+    public void dos(View view) {
+        String btn = textView.getText().toString();
+        btn = btn+"2";
+        textView.setText(btn);
     }
-    public void escribirTres(View view) {
-        String cap = textView.getText().toString();
-        cap = cap+"3";
-        textView.setText(cap);
+    public void tres(View view) {
+        String btn = textView.getText().toString();
+        btn = btn+"3";
+        textView.setText(btn);
     }
-    public void escribirCuatro(View view) {
-        String cap = textView.getText().toString();
-        cap = cap+"4";
-        textView.setText(cap);
+    public void cuatro(View view) {
+        String btn = textView.getText().toString();
+        btn = btn+"4";
+        textView.setText(btn);
     }
-    public void escribirCinco(View view) {
-        String cap = textView.getText().toString();
-        cap = cap+"5";
-        textView.setText(cap);
+    public void cinco(View view) {
+        String btn = textView.getText().toString();
+        btn = btn+"5";
+        textView.setText(btn);
     }
-    public void escribirSeis(View view) {
-        String cap = textView.getText().toString();
-        cap = cap+"6";
-        textView.setText(cap);
+    public void seis(View view) {
+        String btn = textView.getText().toString();
+        btn = btn+"6";
+        textView.setText(btn);
     }
-    public void escribirSiete(View view) {
-        String cap = textView.getText().toString();
-        cap = cap+"7";
-        textView.setText(cap);
+    public void siete(View view) {
+        String btn = textView.getText().toString();
+        btn = btn+"7";
+        textView.setText(btn);
     }
-    public void escribirOcho(View view) {
-        String cap = textView.getText().toString();
-        cap = cap+"8";
-        textView.setText(cap);
+    public void ocho(View view) {
+        String btn = textView.getText().toString();
+        btn = btn+"8";
+        textView.setText(btn);
     }
-    public void escribirNueve(View view) {
-        String cap = textView.getText().toString();
-        cap = cap+"9";
-        textView.setText(cap);
-    }
-
-    public void escribirCero(View view) {
-        String cap = textView.getText().toString();
-        cap = cap+"0";
-        textView.setText(cap);
+    public void nueve(View view) {
+        String btn = textView.getText().toString();
+        btn = btn+"9";
+        textView.setText(btn);
     }
 
-    public void limpiarDatos(View view) {
+    public void cero(View view) {
+        String btn = textView.getText().toString();
+        btn = btn+"0";
+        textView.setText(btn);
+    }
+
+    public void limpiar(View view) {
         textView.setText("");
     }
 
-    public void sumarDatos(View view) {
+    public void sumar(View view) {
         num1 = Double.parseDouble(textView.getText().toString());
-        operador = buttonSuma.getText().charAt(0);
+        operador = '+';
         textView.setText("");
     }
 
-    public void restarDatos(View view) {
+    public void restar(View view) {
         num1 = Double.parseDouble(textView.getText().toString());
-        operador = buttonResta.getText().charAt(0);
+        operador = '-';
         textView.setText("");
     }
-    public void multiplicarDatos(View view) {
+    public void multiplicar(View view) {
         num1 = Double.parseDouble(textView.getText().toString());
-        operador = '×';
+        operador = 'x';
         textView.setText("");
     }
-    public void dividirrDatos(View view) {
+    public void dividir(View view) {
         num1 = Double.parseDouble(textView.getText().toString());
         operador = '/';
         textView.setText("");
     }
 
-    public void operacionResultado(View view) {
+    public void resultado(View view) {
         num2 = Double.parseDouble(textView.getText().toString());
-        switch (operador){
-            case '+':
-                total = num1 + num2;
-                break;
-
-            case '-':
-                total = num1 - num2;
-                break;
-            case '×':
-                total = num1 * num2;
-                break;
-            case '/':
-                total = num1/num2;
-                break;
-
+        if(operador== '+'){
+            total = num1 + num2;
+        } else if(operador == '-') {
+            total = num1 - num2;
+        } else if (operador == 'x') {
+            total = num1 * num2;
+        } else {
+            total = num1/num2;
         }
         textView.setText(Double.toString(total));
         num1 = 0.0;
         num2= 0.0;
-        total=0;
     }
 }
